@@ -4,7 +4,8 @@ import Reducer from './../reducers/Reducer';
 // INITIALISE ALL TYPES OF STATE YOUR APP
 // INITIAL STATE IS OFFERED TO CONTEXT AS A MEANS TO KEEP TRACK OF
 const initialState = {
-  authToken: null
+  authToken: null,
+  loadingApp: true
 };
 
 export const Context = createContext(initialState);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoginPage } from '../screens/login/LoginScreen';
-import { RegisterPage } from '../screens/register/RegisterScreen';
+import { LoginPage } from '../screens/login/LoginPage';
+import { RegisterPage } from '../screens/register/RegisterPage';
 
 const UnauthenticatedStack = createStackNavigator();
 

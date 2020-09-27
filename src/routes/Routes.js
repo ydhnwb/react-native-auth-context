@@ -5,9 +5,8 @@ import { Context } from './../stores/Store';
 import { UnauthenticatedApp } from '../app/UnauthenticatedApp';
 import { AuthenticatedApp } from '../app/AuthenticatedApp';
 import AsyncStorage from "@react-native-community/async-storage";
+import { LoadingApp } from '../app/LoadingApp';
 
-
-const RootNavigationStack = createStackNavigator();
 
 const RootStackScreen = () => {
     const { state, dispatch } = useContext(Context);
@@ -34,6 +33,7 @@ const RootStackScreen = () => {
     }, [])
 
     return (
+        // state.loadingApp ? <LoadingApp/> : !state.authToken ? <UnauthenticatedApp/> : <AuthenticatedApp/>
         !state.authToken ? <UnauthenticatedApp/> : <AuthenticatedApp/>
     );
 };
